@@ -55,9 +55,9 @@ public class TwoStackImplQueue {
         twoStackImplQueue.offer(4);
         twoStackImplQueue.offer(2);
 
-        System.out.println("进行出队队操作，入队元素为：" + twoStackImplQueue.poll());
+        System.out.println("进行出队操作，出队元素为：" + twoStackImplQueue.poll());
         System.out.println("再次进行入队操作，入队元素为：7");
         twoStackImplQueue.offer(7);
-        System.out.println("再次进行出队队操作，入队元素为：" + twoStackImplQueue.poll());
+        System.out.println("再次进行出队队操作，出队元素为：" + twoStackImplQueue.poll());
     }
 }
