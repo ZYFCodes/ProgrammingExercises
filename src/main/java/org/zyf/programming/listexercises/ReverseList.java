@@ -8,6 +8,13 @@ package org.zyf.programming.listexercises;
  */
 public class ReverseList {
 
+    /**
+     * 功能描述：将链表进行反转
+     * @author yanfengzhang
+     * @date 2020-04-29 22:39
+     * @param head 当前链表
+     * @return ListNode 反转以后的链表
+    */
     public ListNode reverseList(ListNode head) {
         /*head为当前节点，如果当前节点为空的话，那就什么也不做，直接返回null；*/
         if (null == head) {
