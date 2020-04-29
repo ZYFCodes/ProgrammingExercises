@@ -1,7 +1,7 @@
 package org.zyf.programming.listexercises;
 
 /**
- * 描述：输入一个链表（单链表），输出该链表中倒数第k个结点。
+ * 描述：链表第K个节点信息
  *
  * @author yanfengzhang
  * @date 2020-04-29 22:47
@@ -9,7 +9,7 @@ package org.zyf.programming.listexercises;
 public class FindKthToTailInListNode {
 
     /**
-     * 功能描述：输出该链表中倒数第k个结点
+     * 功能描述：输入一个链表（单链表），输出该链表中倒数第k个结点。
      *
      * @param head 当前链表
      * @param k    倒数第k个
