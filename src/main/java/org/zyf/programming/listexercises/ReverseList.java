@@ -43,6 +43,13 @@ public class ReverseList {
         return pre;
     }
 
+    /**
+     * 功能描述：打印当前链表
+     * @author yanfengzhang
+     * @date 2020-04-29 23:09
+     * @param head 当前链表
+     * @return String 返回链表信息
+    */
     public String printListNode(ListNode head) {
         StringBuilder stringBuilder = new StringBuilder();
         while (head != null) {
@@ -50,7 +57,6 @@ public class ReverseList {
             head = head.next;
         }
         return stringBuilder.toString();
-
     }
 
     public static void main(String[] args) {
