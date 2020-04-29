@@ -42,6 +42,27 @@ public class FindKthToTailInListNode {
     }
 
     /**
+     * 功能描述：输出该链表中中间结点
+     * @author yanfengzhang
+     * @date 2020-04-29 23:25
+     * @param head 当前链表
+     * @return ListNode 输出该链表中中间结点信息
+    */
+    public ListNode findMiddleNode(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+
+        ListNode index1 = head;
+        ListNode index2 = head;
+        while (index2.next != null) {
+            index1 = index1.next;
+            index2 = index2.next.next;
+        }
+        return index1;
+    }
+
+    /**
      * 功能描述：打印当前链表
      *
      * @param head 当前链表
@@ -70,6 +91,7 @@ public class FindKthToTailInListNode {
         ListNode listNode6 = new ListNode(6);
         ListNode listNode7 = new ListNode(7);
         ListNode listNode8 = new ListNode(8);
+        ListNode listNode9 = new ListNode(9);
         listNode1.next = listNode2;
         listNode2.next = listNode3;
         listNode3.next = listNode4;
@@ -77,8 +99,10 @@ public class FindKthToTailInListNode {
         listNode5.next = listNode6;
         listNode6.next = listNode7;
         listNode7.next = listNode8;
+        listNode8.next = listNode9;
 
         System.out.println("当前链表情况为：" + findKthToTailInListNode.printListNode(listNode1));
         System.out.println("当前链表的倒数第4个节点信息为：" + findKthToTailInListNode.findKthToTail(listNode1, 4).value);
+        System.out.println("当前链表的中间节点信息为：" + findKthToTailInListNode.findMiddleNode(listNode1).value);
     }
 }
