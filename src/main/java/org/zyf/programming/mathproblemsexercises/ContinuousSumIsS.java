@@ -1,4 +1,4 @@
-package org.zyf.programming.mathproblems;
+package org.zyf.programming.mathproblemsexercises;
 
 import java.util.ArrayList;
 
@@ -54,3 +54,4 @@ public class ContinuousSumIsS {
         System.out.println("找到和为92的连续序列：" + findContinuousSequence(92));
     }
 }
+
