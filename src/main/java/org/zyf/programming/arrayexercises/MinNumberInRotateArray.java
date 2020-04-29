@@ -3,7 +3,7 @@ package org.zyf.programming.arrayexercises;
 import java.util.Arrays;
 
 /**
- * 描述：找到排序数组中的最小值
+ * 描述：找到旋转数组中的最小值
  *
  * @author yanfengzhang
  * @date 2020-04-29 13:54
