@@ -60,5 +60,4 @@ public class TwoStackImplQueue {
         twoStackImplQueue.offer(7);
         System.out.println("再次进行出队队操作，入队元素为：" + twoStackImplQueue.poll());
     }
-
 }
