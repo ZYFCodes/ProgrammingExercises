@@ -77,6 +77,6 @@ public class MergeTwoSortedLists {
         System.out.println("当前链表1的相关信息为：" + mergeTwoSortedLists.printListNode(listNode1));
         System.out.println("当前链表2的相关信息为：" + mergeTwoSortedLists.printListNode(listNode11));
         ListNode mergedListNode = mergeTwoSortedLists.mergeTwoLists(listNode1, listNode11);
-        System.out.println("两个链表的第一个公共节点为：" + mergeTwoSortedLists.printListNode(mergedListNode));
+        System.out.println("两个链表合并后的新链表为：" + mergeTwoSortedLists.printListNode(mergedListNode));
     }
 }
