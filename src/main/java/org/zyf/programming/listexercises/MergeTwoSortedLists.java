@@ -8,6 +8,15 @@ package org.zyf.programming.listexercises;
  */
 public class MergeTwoSortedLists {
 
+    /**
+     * 功能描述：两个有序链表合成后的新有序链表
+     *
+     * @param l1 当前链表1
+     * @param l2 当前链表2
+     * @return ListNode 合成后的新有序链表
+     * @author yanfengzhang
+     * @date 2020-04-30 11:42
+     */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null || l2 == null) {
             return null;
