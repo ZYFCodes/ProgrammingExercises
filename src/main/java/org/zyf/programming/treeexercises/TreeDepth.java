@@ -11,6 +11,13 @@ import java.util.LinkedList;
  */
 public class TreeDepth {
 
+    /**
+     * 功能描述：求该树的深度
+     * @author yanfengzhang
+     * @date 2020-04-30 13:50
+     * @param pRoot 当前树信息
+     * @return int 树的深度
+    */
     public int getTreeDepth(TreeNode pRoot) {
         if (pRoot == null) {
             return 0;
