@@ -27,12 +27,14 @@ public class CommonNodeInListNode {
 
         int different = 0;
         if (length1 >= length2) {
+            /*如果链表1的长度大于链表2的长度，先遍历链表1，遍历的长度就是两链表的长度差*/
             different = length1 - length2;
             while (different != 0) {
                 pHead1 = pHead1.next;
                 different--;
             }
         } else {
+            /*如果链表2的长度大于链表1的长度，先遍历链表1，遍历的长度就是两链表的长度差*/
             different = length2 - length1;
             while (different != 0) {
                 pHead2 = pHead2.next;
