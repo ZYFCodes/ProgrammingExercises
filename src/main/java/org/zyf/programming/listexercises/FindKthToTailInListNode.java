@@ -25,8 +25,8 @@ public class FindKthToTailInListNode {
         ListNode index1 = head;
         ListNode index2 = head;
 
-        while (k != 1) {
-            if (index1.next != null) {
+        while (k != 0) {
+            if (index1 != null) {
                 index1 = index1.next;
                 k--;
             } else {
@@ -34,7 +34,7 @@ public class FindKthToTailInListNode {
             }
         }
 
-        while (index1.next != null) {
+        while (index1 != null) {
             index1 = index1.next;
             index2 = index2.next;
         }

@@ -85,7 +85,7 @@ public class CycleInListNode {
         ListNode index2 = head;
         ListNode firstMeet = null;
         ListNode secondMeet = head;
-        while (index2.next != null) {
+        while (index2 != null) {
             index1 = index1.next;
             index2 = index2.next.next;
             if (index1 == index2) {
@@ -94,7 +94,7 @@ public class CycleInListNode {
             }
         }
 
-        while (secondMeet.next != null) {
+        while (secondMeet != null) {
             firstMeet = firstMeet.next;
             secondMeet = secondMeet.next;
             if (firstMeet == secondMeet) {
