@@ -16,26 +16,4 @@ public class TreeNode {
     public TreeNode(int val) {
         this.val = val;
     }
-
-    /**
-     * 功能描述：根据链表构建一颗二叉树
-     *
-     * @param inputList 输入具体的二叉树信息
-     * @return TreeNode 具体的二叉树
-     * @author yanfengzhang
-     * @date 2020-04-30 12:11
-     */
-    public static TreeNode createBinaryTree(LinkedList<Integer> inputList) {
-        if (inputList == null || inputList.isEmpty()) {
-            return null;
-        }
-        TreeNode node = null;
-        Integer data = inputList.removeFirst();
-        if (data != null) {
-            node = new TreeNode(data);
-            node.left = createBinaryTree(inputList);
-            node.right = createBinaryTree(inputList);
-        }
-        return node;
-    }
 }

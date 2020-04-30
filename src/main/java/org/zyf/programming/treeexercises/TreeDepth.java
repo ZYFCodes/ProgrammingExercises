@@ -11,16 +11,6 @@ import java.util.LinkedList;
  */
 public class TreeDepth {
 
-    public static void main(String[] args) {
-        TreeDepth treeDepth = new TreeDepth();
-        LinkedList<Integer> inputList = new LinkedList<Integer>(
-                Arrays.asList(3, 2, 9, null, null, 10, null, null, 8, null, 4)
-        );
-
-        TreeNode pRoot = TreeNode.createBinaryTree(inputList);
-        System.out.println("当前树的深度为：" + treeDepth.getTreeDepth(pRoot));
-    }
-
     public int getTreeDepth(TreeNode pRoot) {
         if (pRoot == null) {
             return 0;
@@ -29,5 +19,37 @@ public class TreeDepth {
         int left = getTreeDepth(pRoot.left);
         int right = getTreeDepth(pRoot.right);
         return left > right ? left + 1 : right + 1;
+    }
+
+    public static void main(String[] args) {
+        TreeDepth treeDepth = new TreeDepth();
+        LinkedList<Integer> inputList = new LinkedList<Integer>(
+                Arrays.asList(3, 2, 9, null, null, 10, null, null, 8, null, 4)
+        );
+
+        TreeNode pRoot = createBinaryTree(inputList);
+        System.out.println("当前树的深度为：" + treeDepth.getTreeDepth(pRoot));
+    }
+
+    /**
+     * 功能描述：根据链表构建一颗二叉树
+     *
+     * @param inputList 输入具体的二叉树信息
+     * @return TreeNode 具体的二叉树
+     * @author yanfengzhang
+     * @date 2020-04-30 12:11
+     */
+    public static TreeNode createBinaryTree(LinkedList<Integer> inputList) {
+        if (inputList == null || inputList.isEmpty()) {
+            return null;
+        }
+        TreeNode node = null;
+        Integer data = inputList.removeFirst();
+        if (data != null) {
+            node = new TreeNode(data);
+            node.left = createBinaryTree(inputList);
+            node.right = createBinaryTree(inputList);
+        }
+        return node;
     }
 }
