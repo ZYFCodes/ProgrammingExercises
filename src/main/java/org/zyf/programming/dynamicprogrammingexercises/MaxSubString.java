@@ -57,5 +57,4 @@ public class MaxSubString {
         System.out.println("当前存在两个字符串分别为：abcdefg，adefgwgeweg");
         System.out.println("两个字符串的最长公共子串为：" + getMaxSubString(str1, str2));
     }
-
 }
