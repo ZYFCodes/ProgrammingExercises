@@ -28,16 +28,6 @@ public class TreeDepth {
         return left > right ? left + 1 : right + 1;
     }
 
-    public static void main(String[] args) {
-        TreeDepth treeDepth = new TreeDepth();
-        LinkedList<Integer> inputList = new LinkedList<Integer>(
-                Arrays.asList(3, 2, 9, null, null, 10, null, null, 8, null, 4)
-        );
-
-        TreeNode pRoot = createBinaryTree(inputList);
-        System.out.println("当前树的深度为：" + treeDepth.getTreeDepth(pRoot));
-    }
-
     /**
      * 功能描述：根据链表构建一颗二叉树
      *
@@ -58,5 +48,15 @@ public class TreeDepth {
             node.right = createBinaryTree(inputList);
         }
         return node;
+    }
+
+    public static void main(String[] args) {
+        TreeDepth treeDepth = new TreeDepth();
+        LinkedList<Integer> inputList = new LinkedList<Integer>(
+                Arrays.asList(3, 2, 9, null, null, 10, null, null, 8, null, 4)
+        );
+
+        TreeNode pRoot = createBinaryTree(inputList);
+        System.out.println("当前树的深度为：" + treeDepth.getTreeDepth(pRoot));
     }
 }
