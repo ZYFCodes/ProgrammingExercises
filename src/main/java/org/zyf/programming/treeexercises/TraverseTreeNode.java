@@ -195,6 +195,14 @@ public class TraverseTreeNode {
         return result;
     }
 
+    /**
+     * 功能描述：给定一个二叉树，返回该二叉树由底层到顶层的层序遍历，（从左向右，从叶子节点到根节点，一层一层的遍历）
+     *
+     * @param root 当前二叉树信息
+     * @return 由底层到顶层的层序遍历结果
+     * @author yanfengzhang
+     * @date 2020-05-06 15:42
+     */
     public ArrayList<ArrayList<Integer>> bottomToTopLevelOderTraverse(TreeNode root) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
         if (root == null) {
