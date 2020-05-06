@@ -49,7 +49,7 @@ public class PathSum {
             return results;
         }
 
-        ArrayList<Integer> result = new ArrayList<Integer>();
+        ArrayList<Integer> result = new ArrayList<>();
         pathSum(root, 0, sum, result);
         return results;
     }
@@ -67,10 +67,11 @@ public class PathSum {
     public void pathSum(TreeNode root, int res, int sum, ArrayList<Integer> result) {
         if (root == null) {
             return;
-        } else if (root.left == null && root.right == null) {
+        }
+        if (root.left == null && root.right == null) {
             if (res + root.val == sum) {
                 result.add(root.val);
-                results.add(new ArrayList<Integer>(result));
+                results.add(new ArrayList<>(result));
                 result.remove(result.size() - 1);
             }
         } else {
