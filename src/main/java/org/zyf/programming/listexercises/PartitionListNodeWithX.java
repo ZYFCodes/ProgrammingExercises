@@ -85,6 +85,6 @@ public class PartitionListNodeWithX {
 
         System.out.println("当前链表情况为：" + partitionListNodeWithX.printListNode(listNode1));
         ListNode newListnode = partitionListNodeWithX.partitionListNodeWithX(listNode1, 5);
-        System.out.println("当前链表的中间33到6反转后的链表情况为：" + partitionListNodeWithX.printListNode(newListnode));
+        System.out.println("给出值x=5，以5为参照将链表划分成两部分为：" + partitionListNodeWithX.printListNode(newListnode));
     }
 }
