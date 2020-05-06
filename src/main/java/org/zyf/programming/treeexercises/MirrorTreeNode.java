@@ -28,7 +28,7 @@ public class MirrorTreeNode {
             return true;
         }
         if (node1 == null || node2 == null) {
-
+            return false;
         }
         if (node1.val == node2.val) {
             return check(node1.left, node2.right) && check(node1.right, node2.left);
