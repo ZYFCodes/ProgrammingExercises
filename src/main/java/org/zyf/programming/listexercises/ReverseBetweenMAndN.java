@@ -80,6 +80,6 @@ public class ReverseBetweenMAndN {
 
         System.out.println("当前链表情况为：" + reverseBetweenMAndN.printListNode(listNode1));
         ListNode newListnode = reverseBetweenMAndN.reverseBetween(listNode1, 3, 6);
-        System.out.println("当前链表的中间33到6反转后的链表情况为：" + reverseBetweenMAndN.printListNode(newListnode));
+        System.out.println("当前链表的中间3到6反转后的链表情况为：" + reverseBetweenMAndN.printListNode(newListnode));
     }
 }
