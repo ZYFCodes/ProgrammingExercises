@@ -19,7 +19,7 @@ public class SortedNumberToBST {
      * @date 2020-05-06 16:45
      */
     public TreeNode sortedArrayToBST(int[] nums) {
-        if (nums.length == 0) {
+        if (nums == null || nums.length == 0) {
             /*异常判断*/
             return null;
         }
