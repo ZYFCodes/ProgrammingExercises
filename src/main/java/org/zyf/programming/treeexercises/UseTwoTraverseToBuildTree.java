@@ -1,5 +1,7 @@
 package org.zyf.programming.treeexercises;
 
+import java.util.Arrays;
+
 /**
  * 描述：【给出一棵树的中序遍历和后序遍历，请构造这颗二叉树】 或 【给出一棵树的前序遍历和中序遍历，请构造这颗二叉树】
  *
@@ -83,5 +85,23 @@ public class UseTwoTraverseToBuildTree {
         node.left = buildTree(preorder, preLeft + 1, preLeft + length, inorder, inLeft, inLeft + length - 1);
         node.right = buildTree(preorder, preLeft + length + 1, preRight, inorder, num + 1, inRight);
         return node;
+    }
+
+    public static void main(String[] args) {
+
+        int[] preorder = {3, 2, 9, 10, 8, 4};
+        int[] inorder = {9, 2, 10, 3, 8, 4};
+        int[] postorder = {9, 10, 2, 4, 8, 3};
+
+        UseTwoTraverseToBuildTree useTwoTraverseToBuildTree = new UseTwoTraverseToBuildTree();
+        SameTreeNode sameTreeNode = new SameTreeNode();
+        System.out.println("当前二叉树信息为：3, 2, 9, null, null, 10, null, null, 8, null, 4");
+        System.out.println("当前二叉树的前序遍历结果为：" + Arrays.toString(preorder));
+        System.out.println("当前二叉树的中序遍历结果为：" + Arrays.toString(inorder));
+        System.out.println("当前二叉树的后序遍历结果为：" + Arrays.toString(postorder));
+        TreeNode treeNode1 = useTwoTraverseToBuildTree.buildTreeWitnInorderAndPostorder(inorder, postorder);
+        TreeNode treeNode2 = useTwoTraverseToBuildTree.buildTreeWithPreorderAndInorder(preorder, inorder);
+        System.out.println("给出一棵树的 中序遍历和后序遍历构造的二叉树信息 与 前序遍历和中序遍历构造的颗二叉树信息 是否一样：" + sameTreeNode.isSameTree(treeNode1, treeNode2));
+
     }
 }
