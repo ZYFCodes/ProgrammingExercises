@@ -15,22 +15,22 @@ public class CountWordsOfArticle {
     public static List countWordsOfArticle(String fileName) throws Exception {
         ArrayList<Map.Entry<String, Integer>> resultList = null;
         try {
-            // 读取文件
+            /*读取文件*/
             BufferedReader br = new BufferedReader(new FileReader(fileName));
-            // 建一个存放读入数据的集合
+            /*建一个存放读入数据的集合*/
             HashMap<String, Integer> CountWordsMap = new HashMap<String, Integer>();
-            // 每次读取一行
+            /*每次读取一行*/
             String line = br.readLine();
             while (null != line) {
-                // 循环读入并进行切分
+                /*循环读入并进行切分*/
                 String[] split = line.split(" ");
                 for (String word : split) {
-                    // 遍历字符串数组
+                    /*遍历字符串数组*/
                     if (0 != word.length()) {
-                        // 判断对象不为空
+                        /*判断对象不为空*/
                         if (CountWordsMap.containsKey(word)) {
-                            // 判断集合中是否包括目标单词
-                            // 如果包括，value值+1，如果不包括，将新单词放入集合中
+                            /*判断集合中是否包括目标单词*/
+                            /*如果包括，value值+1，如果不包括，将新单词放入集合中*/
                             CountWordsMap.put(word, CountWordsMap.get(word) + 1);
                         } else {
                             CountWordsMap.put(word, 1);
@@ -38,9 +38,9 @@ public class CountWordsOfArticle {
                     }
                 }
             }
-            // 集合中的元素以k,v形式取出
+            /*集合中的元素以k,v形式取出*/
             Set<Map.Entry<String, Integer>> entrySet = CountWordsMap.entrySet();
-            // 放入List集合中
+            /*放入List集合中*/
             resultList = new ArrayList<Map.Entry<String, Integer>>(entrySet);
             Collections.sort(resultList, new Comparator<Map.Entry<String, Integer>>() {
                 /*进行降序排序*/
@@ -61,7 +61,7 @@ public class CountWordsOfArticle {
     }
 
     public static void main(String[] args) throws Exception {
-        String fileName= "/Users/yanfengzhang/zyftest/thanosx.sh";
+        String fileName = "/Users/yanfengzhang/zyftest/thanosx.sh";
         System.out.println(countWordsOfArticle(fileName));
     }
 }
