@@ -61,11 +61,12 @@ public class CycleInListNode {
             index1 = index1.next;
             index2 = index2.next.next;
             if (index1 == index2) {
+                lengthOfCycle++;
                 break;
             }
             lengthOfCycle++;
         }
-        return lengthOfCycle + 1;
+        return lengthOfCycle;
     }
 
     /**
