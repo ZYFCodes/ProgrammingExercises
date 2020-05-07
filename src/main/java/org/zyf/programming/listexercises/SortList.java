@@ -51,32 +51,32 @@ public class SortList {
      */
     private ListNode merge(ListNode l1, ListNode l2) {
         /*新建一个结点用于串联并过程结果*/
-        ListNode tmp = new ListNode(0);
-        ListNode p = tmp;
+        ListNode head = new ListNode(0);
+        ListNode mergedListNode = head;
 
         /*并的过程，谁小谁就接到p后面*/
         while (l1 != null && l2 != null) {
             if (l1.value < l2.value) {
-                p.next = l1;
+                mergedListNode.next = l1;
                 l1 = l1.next;
             } else {
-                p.next = l2;
+                mergedListNode.next = l2;
                 l2 = l2.next;
             }
-            p = p.next;
+            mergedListNode = mergedListNode.next;
         }
 
         /*如果有一段没有结束，直接接到后面即可*/
         if (l1 != null) {
-            p.next = l1;
+            mergedListNode.next = l1;
         }
 
         if (l2 != null) {
-            p.next = l2;
+            mergedListNode.next = l2;
         }
 
         /*返回下一个结点*/
-        return tmp.next;
+        return head.next;
     }
 
     /**
