@@ -27,7 +27,7 @@ public class ReorderListNode {
         ListNode slow = head;
         ListNode fast = head;
         /*fast走两步同时slow只走一步，从而找到中间节点*/
-        while (fast.next != null && fast.next.next != null) {
+        while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
