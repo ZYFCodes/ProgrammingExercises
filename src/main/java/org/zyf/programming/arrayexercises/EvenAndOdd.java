@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 描述：数组当中存在 奇jin
+ * 描述：数组当中存在奇数和偶数，将数组进行排序，使得所有奇数位于偶数前面，原位置相对不变
  *
  * @author yanfengzhang
  * @date 2020-04-29 10:38
