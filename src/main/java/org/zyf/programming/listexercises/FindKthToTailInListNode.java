@@ -25,13 +25,9 @@ public class FindKthToTailInListNode {
         ListNode index1 = head;
         ListNode index2 = head;
 
-        while (k != 0) {
-            if (index1 != null) {
-                index1 = index1.next;
-                k--;
-            } else {
-                return null;
-            }
+        while (k != 0 && index1 != null) {
+            index1 = index1.next;
+            k--;
         }
 
         while (index1 != null) {
@@ -43,11 +39,12 @@ public class FindKthToTailInListNode {
 
     /**
      * 功能描述：输出该链表中中间结点
-     * @author yanfengzhang
-     * @date 2020-04-29 23:25
+     *
      * @param head 当前链表
      * @return ListNode 输出该链表中中间结点信息
-    */
+     * @author yanfengzhang
+     * @date 2020-04-29 23:25
+     */
     public ListNode findMiddleNode(ListNode head) {
         if (head == null) {
             return null;
