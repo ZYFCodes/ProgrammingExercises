@@ -25,8 +25,8 @@ public class IsBalancedTree {
         }
 
         int leftDepth = getTreeDepth(root.left);
-        int rightDepyh = getTreeDepth(root.right);
-        int difference = leftDepth - rightDepyh;
+        int rightDepth = getTreeDepth(root.right);
+        int difference = leftDepth - rightDepth;
         if (difference > 1 || difference < -1) {
             return false;
         }
