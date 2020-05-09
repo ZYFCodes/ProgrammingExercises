@@ -31,16 +31,16 @@ public class IsValidBST {
         TreeNode cur = root;
         TreeNode pre = null;
         while (!stack.isEmpty() || cur != null) {
-            if (cur == null) {
+            if (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            } else {
                 cur = stack.pop();
                 if (pre != null && pre.val >= cur.val) {
                     return false;
                 }
                 pre = cur;
                 cur = cur.right;
-            } else {
-                stack.push(cur);
-                cur = cur.left;
             }
         }
         return true;
