@@ -30,7 +30,7 @@ public class UseTwoTraverseToBuildTree {
     }
 
     /*x，y分别代表中序遍历起始、结束位置，i,j分别代表后序遍历起始、结束位置*/
-    public TreeNode solve(int[] inorder, int x, int y, int[] postorder, int i, int j) {
+    private TreeNode solve(int[] inorder, int x, int y, int[] postorder, int i, int j) {
         if (x > y || i > j) {
             return null;
         }
