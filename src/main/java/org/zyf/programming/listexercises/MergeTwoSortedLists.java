@@ -41,6 +41,29 @@ public class MergeTwoSortedLists {
 
 
     /**
+     * 功能描述：采用递归的方式合并两个有序链表
+     *
+     * @param l1 当前链表1
+     * @param l2 当前链表2
+     * @return ListNode 合成后的新有序链表
+     * @author yanfengzhang
+     * @date 2020-05-11 14:08
+     */
+    public ListNode mergeTwoSortedList(ListNode l1, ListNode l2) {
+        if (l1 == null || l2 == null) {
+            return l1 == null ? l2 : l1;
+        }
+
+        if (l1.value >= l2.value) {
+            l2.next = mergeTwoSortedList(l1, l2.next);
+            return l2;
+        } else {
+            l1.next = mergeTwoSortedList(l1.next, l2);
+            return l1;
+        }
+    }
+
+    /**
      * 功能描述：打印当前链表
      *
      * @param head 当前链表
@@ -62,8 +85,8 @@ public class MergeTwoSortedLists {
 
         /*链表1*/
         ListNode listNode1 = new ListNode(1);
-        ListNode listNode2 = new ListNode(2);
-        ListNode listNode3 = new ListNode(3);
+        ListNode listNode2 = new ListNode(4);
+        ListNode listNode3 = new ListNode(9);
         listNode1.next = listNode2;
         listNode2.next = listNode3;
 
@@ -76,7 +99,9 @@ public class MergeTwoSortedLists {
 
         System.out.println("当前链表1的相关信息为：" + mergeTwoSortedLists.printListNode(listNode1));
         System.out.println("当前链表2的相关信息为：" + mergeTwoSortedLists.printListNode(listNode11));
-        ListNode mergedListNode = mergeTwoSortedLists.mergeTwoLists(listNode1, listNode11);
-        System.out.println("两个链表合并后的新链表为：" + mergeTwoSortedLists.printListNode(mergedListNode));
+        //ListNode mergedListNode = mergeTwoSortedLists.mergeTwoLists(listNode1, listNode11);
+        ListNode mergedTwoListNode = mergeTwoSortedLists.mergeTwoSortedList(listNode1, listNode11);
+        //System.out.println("两个链表合并后的新链表为：" + mergeTwoSortedLists.printListNode(mergedListNode));
+        System.out.println("两个链表合并后的新链表为：" + mergeTwoSortedLists.printListNode(mergedTwoListNode));
     }
 }
